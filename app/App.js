@@ -1,13 +1,22 @@
 import { AuthController } from './controllers/AuthController.js';
+import { AccountController } from './controllers/AccountController.js';
+import { HomeController } from './controllers/HomeController.js';
+import { RegionsController } from './controllers/RegionsController.js';
+import { SandboxController } from './controllers/SandboxPokemonController.js';
+import { WildPokemonController } from './controllers/WildPokemonController.js';
 import { router } from './router-config.js';
-const USE_ROUTER = false
+
 
 class App {
+  AuthController = new AuthController();
+  AccountController = new AccountController();
+  HomeController = new HomeController();
+  RegionsController = new RegionsController();
+  SandboxPokemonController = new SandboxPokemonController();
+  WildPokemonController = new WildPokemonController();
 
-  AuthController = new AuthController()
-  
   constructor() {
-    if(USE_ROUTER){
+    if (USE_ROUTER) {
       this.router = router
       this.router.init(this)
     }
@@ -15,6 +24,5 @@ class App {
 }
 
 
-const app = new App()
-// @ts-ignore
-window.app = app
+window.app = new App()
+
