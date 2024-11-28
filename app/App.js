@@ -19,10 +19,11 @@ class App {
     if (USE_ROUTER) {
       this.router = router
       this.router.init(this)
+      console.log("App successfully initialized");
     }
   }
 }
 
-
-window.app = new App()
+const app = new App();
+window.app = app;
 

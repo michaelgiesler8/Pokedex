@@ -21,7 +21,7 @@ export class AccountController {
       event.preventDefault()
       const form = event.target
       const updateData = getFormData(form)
-      accountService.editAccount(updateData)
+      await accountService.editAccount(updateData)
     } catch (error) {
       Pop.error(error)
     }

@@ -1,6 +1,7 @@
 import { EventEmitter } from './utils/EventEmitter.js'
+import { createObservableProxy } from './utils/ObservableProxy.js';
 
-class AppState extends EventEmitter {
+class ObservableAppState extends EventEmitter {
   account = null;
   user = null;
   regions = [];
@@ -10,4 +11,4 @@ class AppState extends EventEmitter {
   activePokemon = null;
 }
 
-export const AppState = new AppState
+export const AppState = createObservableProxy(new ObservableAppState());
