@@ -13,7 +13,7 @@ export class Pokemon {
 
   get Template() {
     return `
-      <div class="card">
+      <div class="card my-2">
         <h3>${this.name}</h3>
         <img src="${this.img}" alt"${this.name}">
         <p>Types: ${this.types.join(', ')}</p>
@@ -21,4 +21,5 @@ export class Pokemon {
       </div>
     `;
   }
+
 }

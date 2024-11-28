@@ -2,7 +2,7 @@ import { AuthController } from './controllers/AuthController.js';
 import { AccountController } from './controllers/AccountController.js';
 import { HomeController } from './controllers/HomeController.js';
 import { RegionsController } from './controllers/RegionsController.js';
-import { SandboxController } from './controllers/SandboxPokemonController.js';
+import { SandboxPokemonController } from './controllers/SandboxPokemonController.js';
 import { WildPokemonController } from './controllers/WildPokemonController.js';
 import { router } from './router-config.js';
 
