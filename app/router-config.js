@@ -6,26 +6,23 @@ import { Router } from "./utils/Router.js";
 
 export const router = new Router([
   {
-    path: '',
+    path: "",
     controllers: [HomeController],
     view: /*html*/`
-    <div class="bg-white p-3">
-      <div class="card-body">
-        <p>Home Page</p>
-        <button class="btn btn-dark" onclick="app.HomeController.testButton()">😎</button>
+      <div id="home">
+        <h1>Welcome to the Pokedex</h1>
+        <button onclick="app.HomeController.testButton()">Test</button>
       </div>
-    </div>
-    `
+    `,
   },
   {
-    path: '#/about',
-    view: 'app/views/AboutView.html'
-  },
-  {
-    path: '#/account',
+    path: "#/account",
     middleware: [AuthGuard],
     controllers: [AccountController],
-    view: 'app/views/AccountView.html',
+    view: /*html*/`
+      <div id="account-form"></div>
+      <div id="account-details"></div>
+    `,
   }
 ])
 

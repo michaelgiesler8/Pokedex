@@ -5,7 +5,13 @@ import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
 
 function _drawAccount() {
-  if (!AppState.account) { return }
+  if (!AppState.account) return;
+
+  const accountDetails = document.getElementById("account-details");
+  if (!accountDetails) {
+    console.error("Element with ID 'account-details' not found");
+    return;
+  }
   setHTML('account-details', AppState.account.AccountCardTemplate)
   setHTML('account-form', AppState.account.AccountFormTemplate)
 }
